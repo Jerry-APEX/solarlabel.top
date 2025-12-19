@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolarTag Pro - Custom Solar Labels & BOS Kits (Factory Direct)</title>
+    <meta name="description" content="AS/NZS 5033 Compliant Solar Labels. Direct from Manufacturer. OEM Service Available.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* --- Traffolyte Material Styles --- */
+        .traffolyte-label {
+            border: 2px solid;
+            font-family: 'Courier New', monospace;
+            text-transform: uppercase;
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.1), 2px 2px 4px rgba(0,0,0,0.2);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        /* 1. Yellow / Black (Standard) */
+        .style-yellow {
+            background-color: #fbbf24; 
+            color: #000;
+            border-color: #000;
+        }
+        
+        /* 2. Red / White (Danger) */
+        .style-red {
+            background-color: #dc2626; 
+            color: #fff;
+            border-color: #fff;
+        }
+
+        /* 3. Green / White (Safety/Earth) */
+        .style-green {
+            background-color: #16a34a; 
+            color: #fff;
+            border-color: #fff;
+        }
+
+        /* 4. White / Black (General) */
+        .style-white {
+            background-color: #f9fafb; 
+            color: #000;
+            border-color: #000;
+        }
+        
+        .engraved-text {
+            text-shadow: 1px 1px 0px rgba(255,255,255,0.1), -1px -1px 0px rgba(0,0,0,0.1);
+        }
+
+        /* Reflective Circle Effect */
+        .reflective-circle {
+            background: radial-gradient(circle at 30% 30%, #4ade80, #16a34a);
+            box-shadow: 0 0 15px rgba(74, 222, 128, 0.8), inset 0 0 20px rgba(255,255,255,0.4);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            border: 2px solid #fff;
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1613665813446-82a78c468a1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .fade-in { animation: fadeIn 1s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0.4; } to { opacity: 1; } }
+
+        html { scroll-behavior: smooth; }
+        
+        .whatsapp-float {
+            position: fixed; bottom: 30px; right: 30px; z-index: 100;
+            transition: transform 0.3s;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); }
+
+        /* Custom Radio Button Styling */
+        .color-radio:checked + div {
+            ring-color: #3b82f6;
+            ring-width: 2px;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 flex flex-col min-h-screen">
+
+    <!-- Top Bar -->
+    <div class="bg-slate-900 text-gray-300 text-xs py-2">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <span><i data-lucide="factory" class="inline w-3 h-3 mr-1 text-yellow-500"></i> China Factory Direct | Custom Manufacturing | <span class="text-yellow-500 font-bold">MOQ: 50 Sets</span></span>
+            <div class="flex space-x-4 mt-1 md:mt-0 justify-center">
+                <a href="mailto:qq280709358@gmail.com" class="hover:text-white transition flex items-center"><i data-lucide="mail" class="w-3 h-3 mr-1"></i> qq280709358@gmail.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center">
+                    <div class="bg-yellow-500 p-2 rounded mr-3 shadow-sm">
+                        <i data-lucide="sun" class="h-6 w-6 text-white"></i>
+                    </div>
+                    <div>
+                        <span class="font-bold text-2xl text-slate-900 tracking-tight">SolarTag Pro</span>
+                        <span class="block text-[10px] text-slate-500 uppercase tracking-widest font-bold">Manufacturing Partner</span>
+                    </div>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-slate-900 font-bold border-b-2 border-yellow-500">Home</a>
+                    <a href="products.html" class="text-slate-600 hover:text-slate-900 font-medium transition">Products</a>
+                    <a href="about.html" class="text-slate-600 hover:text-slate-900 font-medium transition">Factory & FAQ</a>
+                    <a href="https://wa.me/8619120719547" class="bg-green-600 hover:bg-green-700 text-white px-6 py-2.5 rounded-full font-bold transition flex items-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                        <i data-lucide="message-circle" class="w-4 h-4 mr-2"></i> WhatsApp Quote
+                    </a>
+                </div>
+                <!-- Mobile Menu Icon -->
+                <div class="md:hidden flex items-center">
+                    <a href="https://wa.me/8619120719547" class="text-green-600 p-2"><i data-lucide="message-circle" class="h-7 w-7"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-bg py-24 md:py-32 text-center text-white relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 relative z-10">
+            <div class="inline-block bg-yellow-500/20 border border-yellow-500/50 backdrop-blur-sm px-4 py-1.5 rounded-full mb-6">
+                <span class="text-yellow-400 text-sm font-bold tracking-wide uppercase flex items-center gap-2 justify-center">
+                    <i data-lucide="check-circle" class="w-4 h-4"></i> 100% Custom Made for Your Projects
+                </span>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+                Your Strategic Supply Partner for <br/>
+                <span class="text-yellow-400">Compliant Solar Labels</span>
+            </h1>
+            <p class="text-lg text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Direct from our factory to your warehouse. <br/>
+                We customize engraving to your BOM. No retail markups. <br/>
+                <strong>Save 40%+ on your procurement costs.</strong>
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://wa.me/8619120719547?text=Hi,%20I%20am%20interested%20in%20a%20quote%20for%20solar%20labels." class="bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-10 rounded-lg transition shadow-lg text-lg flex items-center justify-center">
+                    <i data-lucide="message-circle" class="w-5 h-5 mr-2"></i> Chat for Quote
+                </a>
+                <a href="mailto:qq280709358@gmail.com" class="bg-white/10 hover:bg-white/20 border border-white/30 backdrop-blur text-white font-bold py-4 px-10 rounded-lg transition text-lg flex items-center justify-center">
+                    <i data-lucide="mail" class="w-5 h-5 mr-2"></i> Email Inquiry
+                </a>
+            </div>
+            <p class="mt-6 text-slate-400 text-sm italic">
+                * We do not have a standard price list as every order is custom made. Contact us for a tailored quote.
+            </p>
+        </div>
+    </div>
+
+    <!-- Region/Compliance Interactive Selector -->
+    <section class="py-16 bg-slate-900 text-white border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <span class="text-yellow-500 font-bold tracking-wider uppercase text-xs">Compliance Expertise</span>
+            <h2 class="text-3xl font-bold mt-2 mb-8">We Know The Rules: AS/NZS 5033:2021</h2>
+            
+            <div class="bg-slate-800 rounded-2xl p-8 max-w-4xl mx-auto border border-slate-700">
+                <div class="flex flex-col md:flex-row justify-center gap-4 mb-8">
+                     <button onclick="setRegion('national')" id="btn-national" class="px-8 py-3 rounded-full font-bold transition-all flex items-center justify-center bg-yellow-500 text-slate-900 shadow-lg">
+                        National (NSW/QLD/WA)
+                    </button>
+                    <button onclick="setRegion('vic')" id="btn-vic" class="px-8 py-3 rounded-full font-bold transition-all flex items-center justify-center bg-slate-700 text-slate-400 hover:text-white hover:bg-slate-600">
+                        Victoria (ESV)
+                    </button>
+                </div>
+                
+                <div id="compliance-content" class="text-left bg-slate-900 p-6 rounded-xl border border-slate-700 transition-all duration-300">
+                    <!-- Default Content (National) -->
+                    <h4 class="text-xl font-bold text-yellow-400 mb-2 flex items-center">
+                        <i data-lucide="check-circle" class="mr-2"></i> Standard National Kit
+                    </h4>
+                    <p class="text-slate-400 text-sm mb-6">
+                        Suitable for installations in NSW, QLD, SA, WA, TAS, NT. <br>
+                        Fully compliant with <strong>AS/NZS 5033:2021 Amendment 2</strong> & <strong>AS/NZS 4777.1</strong>.
+                    </p>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 items-center justify-items-center">
+                        <!-- Label 1: Yellow/Black -->
+                        <div class="traffolyte-label style-yellow w-full p-2 text-center text-[10px] h-16 flex items-center justify-center font-bold">
+                            MAIN SWITCH<br>INVERTER SUPPLY
+                        </div>
+                        <!-- Label 2: Yellow/Black -->
+                        <div class="traffolyte-label style-yellow w-full p-2 text-center text-[10px] h-16 flex items-center justify-center font-bold">
+                            PV ARRAY<br>DC ISOLATOR
+                        </div>
+                        <!-- Label 3: Red/White (Corrected) -->
+                        <div class="traffolyte-label style-red w-full p-2 text-center text-[10px] h-16 flex items-center justify-center font-bold">
+                            WARNING<br>PV ARRAY
+                        </div>
+                        <!-- Label 4: PV Circle (Green Reflective) -->
+                        <div class="reflective-circle rounded-full text-white h-20 w-20 flex items-center justify-center font-bold text-3xl mx-auto">
+                            PV
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Products: Kits -->
+    <section class="py-16 bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-2xl font-bold text-slate-900 mb-8 flex items-center border-l-4 border-yellow-500 pl-4">
+                Popular Label Kits (Customizable)
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Product Card 1 -->
+                <div class="group border border-gray-100 rounded-2xl overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="h-56 bg-gray-100 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1548698943-26f6eb8b965c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Residential Kit">
+                        <div class="absolute top-4 left-4 bg-slate-900 text-white text-xs font-bold px-3 py-1 rounded">Top Seller</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-slate-900">Residential Kit (6-10kW)</h3>
+                        <p class="text-sm text-slate-500 mb-4">Complete DC/AC Set</p>
+                        <ul class="text-sm text-slate-600 mb-4 space-y-1">
+                            <li>• Main Switch & Inverter Supply</li>
+                            <li>• PV Array DC Isolator</li>
+                            <li>• Shutdown Procedure (Custom)</li>
+                        </ul>
+                        <div class="flex justify-between items-center border-t border-gray-100 pt-4">
+                            <span class="text-slate-900 font-bold text-sm">MOQ: 50 Sets</span>
+                            <a href="https://wa.me/8619120719547" class="text-green-600 text-sm font-bold hover:underline">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="group border border-gray-100 rounded-2xl overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="h-56 bg-gray-100 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1625305282544-7967946955a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Microinverter Kit">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-slate-900">Microinverter Kit</h3>
+                        <p class="text-sm text-slate-500 mb-4">Enphase / Hoymiles</p>
+                        <ul class="text-sm text-slate-600 mb-4 space-y-1">
+                            <li>• Simplified DC Warnings</li>
+                            <li>• AC Branch Circuit Labels</li>
+                            <li>• Reflective ES/PV Sign</li>
+                        </ul>
+                        <div class="flex justify-between items-center border-t border-gray-100 pt-4">
+                            <span class="text-slate-900 font-bold text-sm">MOQ: 50 Sets</span>
+                            <a href="https://wa.me/8619120719547" class="text-green-600 text-sm font-bold hover:underline">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="group border-2 border-yellow-400 rounded-2xl overflow-hidden hover:shadow-xl transition duration-300 relative">
+                    <div class="absolute top-0 right-0 bg-yellow-400 text-xs font-bold px-3 py-1 text-black z-10">High Value</div>
+                    <div class="h-56 bg-gray-100 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1620606042466-99d8d17b3f96?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Battery Kit">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-slate-900">Battery / Hybrid Kit</h3>
+                        <p class="text-sm text-slate-500 mb-4">AS/NZS 5139 Compliant</p>
+                        <ul class="text-sm text-slate-600 mb-4 space-y-1">
+                            <li>• Battery DC Isolator</li>
+                            <li>• Lithium Ion Warnings</li>
+                            <li>• Custom Voltage Engraving</li>
+                        </ul>
+                        <div class="flex justify-between items-center border-t border-gray-100 pt-4">
+                            <span class="text-slate-900 font-bold text-sm">MOQ: 50 Sets</span>
+                            <a href="https://wa.me/8619120719547" class="text-green-600 text-sm font-bold hover:underline">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customization Demo (Improved Colors) -->
+    <section class="py-16 bg-slate-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <span class="text-yellow-600 font-bold text-xs uppercase tracking-widest">Live Engraving Preview</span>
+                <h2 class="text-3xl font-bold mb-4 text-slate-900">You Type, We Engrave.</h2>
+                <p class="text-slate-600 mb-6">
+                    Don't settle for generic packs. We customize every label to match your exact shutdown procedure or voltage ratings. 
+                    <br><strong>Try our 4 standard Traffolyte material colors:</strong>
+                </p>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                    <!-- Text Inputs -->
+                    <label class="block text-sm font-bold text-slate-700 mb-2">Line 1 Text</label>
+                    <input type="text" id="line1-input" value="MAIN SWITCH" 
+                           class="w-full bg-slate-50 border border-slate-300 rounded px-3 py-2 text-slate-900 mb-2 focus:ring-2 focus:ring-yellow-500 focus:outline-none font-mono uppercase"
+                           oninput="updateLabel()">
+                    <label class="block text-sm font-bold text-slate-700 mb-4">Line 2 Text</label>
+                    <input type="text" id="line2-input" value="INVERTER SUPPLY" 
+                           class="w-full bg-slate-50 border border-slate-300 rounded px-3 py-2 text-slate-900 mb-6 focus:ring-2 focus:ring-yellow-500 focus:outline-none font-mono uppercase"
+                           oninput="updateLabel()">
+                    
+                    <!-- Color Picker -->
+                    <label class="block text-sm font-bold text-slate-700 mb-3">Select Material:</label>
+                    <div class="flex items-center gap-4">
+                        <!-- Yellow/Black -->
+                        <label class="cursor-pointer group relative">
+                            <input type="radio" name="labelColor" value="style-yellow" class="peer sr-only color-radio" checked onchange="changeColor(this.value)">
+                            <div class="w-8 h-8 rounded-full bg-yellow-400 border-2 border-gray-200 peer-checked:ring-2 peer-checked:ring-offset-2 peer-checked:ring-yellow-500"></div>
+                            <span class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-[10px] text-slate-500 whitespace-nowrap opacity-0 group-hover:opacity-100 transition">Yellow</span>
+                        </label>
+                        <!-- Red/White -->
+                        <label class="cursor-pointer group relative">
+                            <input type="radio" name="labelColor" value="style-red" class="peer sr-only color-radio" onchange="changeColor(this.value)">
+                            <div class="w-8 h-8 rounded-full bg-red-600 border-2 border-gray-200 peer-checked:ring-2 peer-checked:ring-offset-2 peer-checked:ring-red-600"></div>
+                            <span class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-[10px] text-slate-500 whitespace-nowrap opacity-0 group-hover:opacity-100 transition">Red</span>
+                        </label>
+                        <!-- Green/White -->
+                        <label class="cursor-pointer group relative">
+                            <input type="radio" name="labelColor" value="style-green" class="peer sr-only color-radio" onchange="changeColor(this.value)">
+                            <div class="w-8 h-8 rounded-full bg-green-600 border-2 border-gray-200 peer-checked:ring-2 peer-checked:ring-offset-2 peer-checked:ring-green-600"></div>
+                            <span class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-[10px] text-slate-500 whitespace-nowrap opacity-0 group-hover:opacity-100 transition">Green</span>
+                        </label>
+                        <!-- White/Black -->
+                        <label class="cursor-pointer group relative">
+                            <input type="radio" name="labelColor" value="style-white" class="peer sr-only color-radio" onchange="changeColor(this.value)">
+                            <div class="w-8 h-8 rounded-full bg-gray-100 border-2 border-gray-300 peer-checked:ring-2 peer-checked:ring-offset-2 peer-checked:ring-gray-400"></div>
+                            <span class="absolute -bottom-6 left-1/2 -translate-x-1/2 text-[10px] text-slate-500 whitespace-nowrap opacity-0 group-hover:opacity-100 transition">White</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <!-- Preview Box -->
+                <div id="label-preview" class="traffolyte-label style-yellow w-full max-w-md h-40 flex flex-col items-center justify-center p-4 rounded text-center transform rotate-1 shadow-xl transition-all duration-300">
+                    <h3 id="label-line1" class="engraved-text text-3xl font-bold tracking-widest mb-1">MAIN SWITCH</h3>
+                    <p id="label-line2" class="engraved-text text-xl font-semibold tracking-wider">INVERTER SUPPLY</p>
+                    <!-- Screw Holes Simulation -->
+                    <div class="absolute top-3 left-3 w-3 h-3 rounded-full bg-black opacity-20 border border-white/30"></div>
+                    <div class="absolute top-3 right-3 w-3 h-3 rounded-full bg-black opacity-20 border border-white/30"></div>
+                    <div class="absolute bottom-3 left-3 w-3 h-3 rounded-full bg-black opacity-20 border border-white/30"></div>
+                    <div class="absolute bottom-3 right-3 w-3 h-3 rounded-full bg-black opacity-20 border border-white/30"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Essential BOS Accessories (Upsell Section) -->
+    <section class="py-16 bg-slate-900 text-gray-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-10">
+                <div>
+                    <h2 class="text-3xl font-bold text-white">Essential BOS Accessories</h2>
+                    <p class="mt-2 text-slate-400">Increase your order value. Ship these with your labels to save on freight.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Accessory 1 -->
+                <div class="bg-slate-800 border border-slate-700 rounded-xl p-4 hover:bg-slate-750 transition group">
+                    <div class="h-32 mb-4 overflow-hidden rounded bg-white">
+                        <img src="https://plus.unsplash.com/premium_photo-1663089688180-444ff0066e5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <h4 class="font-bold text-white text-sm">316 Stainless Ties</h4>
+                    <p class="text-xs text-slate-500 mb-2">Epoxy Coated | 100pcs/bag</p>
+                    <span class="text-[10px] bg-yellow-600/20 text-yellow-500 px-2 py-1 rounded">MOQ: 50 Bags</span>
+                </div>
+                 <!-- Accessory 2 -->
+                 <div class="bg-slate-800 border border-slate-700 rounded-xl p-4 hover:bg-slate-750 transition group">
+                    <div class="h-32 mb-4 overflow-hidden rounded bg-white">
+                        <img src="https://images.unsplash.com/photo-1555617981-8b3833b7074e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <h4 class="font-bold text-white text-sm">PV Wire Clips</h4>
+                    <p class="text-xs text-slate-500 mb-2">SUS304 | Anti-scratch</p>
+                    <span class="text-[10px] bg-yellow-600/20 text-yellow-500 px-2 py-1 rounded">MOQ: 5000 Pcs</span>
+                </div>
+                 <!-- Accessory 3 -->
+                 <div class="bg-slate-800 border border-slate-700 rounded-xl p-4 hover:bg-slate-750 transition group">
+                    <div class="h-32 mb-4 overflow-hidden rounded bg-white">
+                        <img src="https://images.unsplash.com/photo-1621252179027-94459d27d3ee?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <h4 class="font-bold text-white text-sm">MC4 Connectors</h4>
+                    <p class="text-xs text-slate-500 mb-2">1000V DC IP67</p>
+                    <span class="text-[10px] bg-yellow-600/20 text-yellow-500 px-2 py-1 rounded">MOQ: 100 Pairs</span>
+                </div>
+                 <!-- Accessory 4 -->
+                 <div class="bg-slate-800 border border-slate-700 rounded-xl p-4 hover:bg-slate-750 transition group flex flex-col justify-center text-center">
+                    <div class="h-20 flex items-center justify-center text-yellow-500 mb-2">
+                        <i data-lucide="package-plus" class="w-12 h-12"></i>
+                    </div>
+                    <h4 class="font-bold text-white text-sm">Custom Kitting</h4>
+                    <p class="text-xs text-slate-400">Labels + Ties in 1 bag.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Factory Carousel Banner -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-slate-900">Inside Our Factory</h2>
+                <p class="text-slate-600 mt-2">See where your products are made. 100% Transparent Manufacturing.</p>
+            </div>
+            
+            <div class="relative rounded-2xl overflow-hidden shadow-2xl h-64 md:h-[450px]">
+                <div id="carousel-slide" class="absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-in-out transform scale-100" style="background-image: url('https://images.unsplash.com/photo-1565514020176-892eb1036e67?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
+                    <div class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center p-4">
+                        <h3 id="carousel-title" class="text-3xl md:text-5xl font-bold text-white mb-4 fade-in">Mass Production Capacity</h3>
+                        <p id="carousel-text" class="text-gray-200 text-lg md:text-xl fade-in">20 Laser Machines running 24/7 to meet your deadlines.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom Contact Section -->
+    <section class="py-16 bg-slate-50 border-t border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-slate-900 mb-6">Ready to Optimize Your Supply Chain?</h2>
+            <p class="text-slate-600 mb-8">
+                Send us your Bill of Materials (BOM) or quantity requirements today. <br/>
+                We usually reply within 2 hours during business days.
+            </p>
+            
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-center w-full md:w-auto hover:shadow-md transition cursor-pointer">
+                    <a href="https://wa.me/8619120719547" class="flex items-center w-full">
+                        <div class="bg-green-100 p-3 rounded-full mr-4"><i data-lucide="phone" class="text-green-600 w-6 h-6"></i></div>
+                        <div class="text-left">
+                            <span class="block text-xs text-slate-500 font-bold uppercase">WhatsApp / Mobile</span>
+                            <span class="block text-lg font-bold text-slate-900">+86 191 2071 9547</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-center w-full md:w-auto hover:shadow-md transition cursor-pointer">
+                    <a href="mailto:qq280709358@gmail.com" class="flex items-center w-full">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4"><i data-lucide="mail" class="text-blue-600 w-6 h-6"></i></div>
+                        <div class="text-left">
+                            <span class="block text-xs text-slate-500 font-bold uppercase">Email Support</span>
+                            <span class="block text-lg font-bold text-slate-900">qq280709358@gmail.com</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="mb-4 text-sm">SolarTag Pro - Manufacturing Partner for Global Solar Compliance.</p>
+            <p class="text-xs">&copy; 2025 SolarTag Pro. Factory Direct.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/8619120719547?text=Hi,%20I%20saw%20your%20website%20and%20interested%20in%20pricing." class="whatsapp-float bg-green-500 hover:bg-green-600 text-white rounded-full p-3 shadow-lg flex items-center justify-center w-14 h-14" target="_blank" title="Chat on WhatsApp">
+        <i data-lucide="message-circle" class="w-8 h-8"></i>
+    </a>
+
+    <script>
+        lucide.createIcons();
+
+        // Region Selection Logic
+        function setRegion(region) {
+            const btnNational = document.getElementById('btn-national');
+            const btnVic = document.getElementById('btn-vic');
+            const content = document.getElementById('compliance-content');
+            
+            if (region === 'vic') {
+                // Style Buttons
+                btnVic.classList.remove('bg-slate-700', 'text-slate-400');
+                btnVic.classList.add('bg-yellow-500', 'text-slate-900', 'shadow-lg');
+                btnNational.classList.add('bg-slate-700', 'text-slate-400');
+                btnNational.classList.remove('bg-yellow-500', 'text-slate-900', 'shadow-lg');
+                
+                // Content: VIC
+                content.innerHTML = `
+                    <h4 class="text-xl font-bold text-yellow-400 mb-2 flex items-center">
+                        <i data-lucide="alert-circle" class="mr-2"></i> Victoria (ESV) Compliant Kit
+                    </h4>
+                    <p class="text-slate-400 text-sm mb-6">
+                        Strictly compliant with <strong>Energy Safe Victoria (ESV)</strong> guidelines. <br>
+                        Includes mandatory reflective signage and battery room labelling.
+                    </p>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 items-center justify-items-center">
+                        <div class="traffolyte-label style-yellow w-full p-2 text-center text-[10px] h-16 flex items-center justify-center font-bold">MAIN SWITCH<br>INVERTER SUPPLY</div>
+                        <!-- Green Reflective ES Circle -->
+                        <div class="reflective-circle rounded-full text-white h-20 w-20 flex items-center justify-center font-bold text-3xl mx-auto">ES</div>
+                        <div class="traffolyte-label style-red w-full p-2 text-center text-[10px] h-16 flex items-center justify-center font-bold">SHUTDOWN<br>PROCEDURE</div>
+                        <div class="traffolyte-label style-yellow w-full p-2 text-center text-[10px] h-16 flex items-center justify-center font-bold">BATTERY<br>SYSTEM</div>
+                    </div>
+                `;
+            } else {
+                // Style Buttons
+                btnNational.classList.remove('bg-slate-700', 'text-slate-400');
+                btnNational.classList.add('bg-yellow-500', 'text-slate-900', 'shadow-lg');
+                btnVic.classList.add('bg-slate-700', 'text-slate-400');
+                btnVic.classList.remove('bg-yellow-500', 'text-slate-900', 'shadow-lg');
+
+                // Content: National
+                content.innerHTML = `
+                    <h4 class="text-xl font-bold text-yellow-400 mb-2 flex items-center">
+                        <i data-lucide="check-circle" class="mr-2"></i> Standard National Kit
+                    </h4>
+                    <p class="text-slate-400 text-sm mb-6">
+                        Suitable for installations in NSW, QLD, SA, WA, TAS, NT. <br>
+                        Fully compliant with <strong>AS/NZS 5033:2021 Amendment 2</strong>.
+                    </p>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 items-center justify-items-center">
+                        <div class="traffolyte-label style-yellow w-full p-2 text-center text-[10px] h-16 flex items-center justify-center font-bold">MAIN SWITCH<br>INVERTER SUPPLY</div>
+                        <div class="traffolyte-label style-yellow w-full p-2 text-center text-[10px] h-16 flex items-center justify-center font-bold">PV ARRAY<br>DC ISOLATOR</div>
+                        <div class="traffolyte-label style-red w-full p-2 text-center text-[10px] h-16 flex items-center justify-center font-bold">WARNING<br>PV ARRAY</div>
+                        <!-- Green Reflective PV Circle -->
+                        <div class="reflective-circle rounded-full text-white h-20 w-20 flex items-center justify-center font-bold text-3xl mx-auto">PV</div>
+                    </div>
+                `;
+            }
+            lucide.createIcons();
+        }
+
+        // Live Preview Logic
+        function updateLabel() {
+            const line1 = document.getElementById('line1-input').value;
+            const line2 = document.getElementById('line2-input').value;
+            document.getElementById('label-line1').innerText = line1 || 'MAIN SWITCH';
+            document.getElementById('label-line2').innerText = line2 || '';
+        }
+
+        // Color Changer Logic
+        function changeColor(styleClass) {
+            const previewBox = document.getElementById('label-preview');
+            // Remove existing style classes
+            previewBox.classList.remove('style-yellow', 'style-red', 'style-green', 'style-white');
+            // Add new style class
+            previewBox.classList.add(styleClass);
+        }
+
+        // Factory Carousel Logic
+        const slides = [
+            { img: 'https://images.unsplash.com/photo-1565514020176-892eb1036e67?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80', title: 'Mass Production Capacity', text: '20 Laser Machines running 24/7' },
+            { img: 'https://images.unsplash.com/photo-1616422285623-13ff0162193c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80', title: 'Precision Engraving', text: 'High-speed lasers for perfect text' },
+            { img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80', title: 'Strict Quality Control', text: 'Every label checked before packing' }
+        ];
+        let currentSlide = 0;
+        
+        function rotateCarousel() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            const slideEl = document.getElementById('carousel-slide');
+            const titleEl = document.getElementById('carousel-title');
+            const textEl = document.getElementById('carousel-text');
+            
+            // Fade out
+            slideEl.style.opacity = '0.8'; 
+            
+            setTimeout(() => {
+                slideEl.style.backgroundImage = `url('${slides[currentSlide].img}')`;
+                titleEl.innerText = slides[currentSlide].title;
+                textEl.innerText = slides[currentSlide].text;
+                slideEl.style.opacity = '1';
+                
+                // Re-trigger animation
+                titleEl.classList.remove('fade-in');
+                void titleEl.offsetWidth; // trigger reflow
+                titleEl.classList.add('fade-in');
+                
+                textEl.classList.remove('fade-in');
+                void textEl.offsetWidth; 
+                textEl.classList.add('fade-in');
+            }, 300);
+        }
+        
+        setInterval(rotateCarousel, 5000);
+
+    </script>
+</body>
+</html>
